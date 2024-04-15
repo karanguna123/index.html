@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container {
+    display: flex;
+    align-items: center;
+}
+
+ .head {
+    background-color: rgb(247, 125, 125);
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+#btn {
+    background-color: rgb(255, 184, 184);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #000000;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: blue;
+}
+    
+.input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input_box {
+    height: 300px;
+    width: 50%;
+    background-color:rgb(34, 211, 114);
+    border-radius: 5px;
+    margin-left: 100px;
+    padding-left: 25px;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+.time {
+    height: 300px;
+    width: 250px;
+    background-color:rgb(0, 238, 255);
+    border-radius: 300px;
+    padding-left: 25px;
+    padding-top: 100px;
+}
+
+#stopwatch {
+    color:rgba(231, 54, 83, 0.952);
+    font-size: 24px;
+    margin-left: 30px;
+    margin-bottom: 25px;    
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3f3f3f;
+    color: white;
+    margin-left: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color:aqua;
+}
+
+select, input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+} 
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+h1{
+    text-align: center;
+    border: double;
+}
+h2{
+    text-align: center;
+    border: double;
+}
+h3{
+    text-align: center;
+    border: double;
+}
+
+    </style>
+</head>
+<h1>Filter Table</h1>
+<br>
+<br>
+ <select name="select" id="taskselect">
+    <option value="All">Categories</option>
+    <option value="personal break">personal break</option>
+    <option value="meeting">meeting</option>
+    <option value="project work">project work</option>
+  </select>
+  <br>
+  <br>
+<table>
+<thead>
+    <tr>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Duration</th>
+        <th>update</th>
+        <th>Delete</th>
+        
+    </tr>
+</thead>
+<tbody id="taskData">
+</tbody>
+</table>
+
+<script src="index.js"></script>
+<br>
+<br>
+    <h2>Stop Watch</h2>
+    <div class="Input">
+        <div class="container">
+            <div class="time">
+                <p id="stopwatch">00 : 00 : 00 : 00</p>
+                <button id="startStop" onclick="startstop()">Start</button>
+                <button onclick="reset()">Reset</button>
+                <br>
+                <br>
+                <button onclick="addAll()"> Submit</button>
+            </div>
+<!-- --------------------------------------------------------------------- -->       
+        </div>
+      <br>
+      <br>
+      <h3>Add Element To Filter Table</h3>
+   <div class="input_box">
+                <select id="task1"> 
+                    <option value="personal break">Personal Break</option>
+                    <option value="meeting">Meeting</option>
+                    <option value="project work">Project Work</option>
+                </select> <br><br>
+                <select id="description1">
+                    <option value="development">Development</option>
+                    <option value="Client Meeting">Client Meeting</option>
+                    <option value="-">-</option>
+                </select><br><br>
+                <label for="duration1">Duration</label>
+                <input type="text" id="duration1" placeholder="00 : 00 : 00">
+            </div>
+        </div>
+        <br>
+        <br>
+        <button onclick="addAll()">submit</button>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
